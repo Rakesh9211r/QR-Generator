@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Custom QR Code Generator</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="bb.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Updated instruction text -->
+            <center><p>Enter multiple lines of text or URLs to generate your custom QR code, and upload an image if needed!</p></center>
+
+            <!-- Multi-line text input -->
+            <textarea id="textQR" placeholder="Enter text or URLs, press Enter for new lines..." rows="4" cols="50"></textarea>
+
+            <!-- Image upload input -->
+            <div>
+                <label for="uploadImage">Upload an image:</label>
+                <input type="file" id="uploadImage" accept="image/*" onchange="previewImage(event)">
+            </div>
+
+            <!-- Preview image container -->
+            <div id="imagePreviewBox">
+                <img id="imagePreview" src="" alt="Image Preview" style="display:none; width:200px; height:200px;">
+            </div>
+
+            <!-- QR code generation -->
+            <div id="ImgBox">
+                <img src="" id="qrImage" alt="Generated QR Code">
+            </div>
+
+            <button onclick="generateQR()">Generate QR Code</button>
+
+            <footer>
+                <p>Made With ❤️ By bp</p>
+            </footer>
+        </div>
+
+        <script src="bb1.js"></script>
+
+        
+</html>
